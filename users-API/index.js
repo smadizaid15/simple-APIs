@@ -35,7 +35,7 @@ app.get("/users/:id",(req,res)=>{
    }
 
   
-app.put("/users",(req,res)=>{
+app.put("/users/:id",(req,res)=>{
   const id=Number(req.params.body);
   const {name,email}=req.body;
   const user=users.find(u=>u.id===id);
@@ -48,7 +48,7 @@ app.put("/users",(req,res)=>{
 });
 
 
-app.delete("/users",(req,res)=>{
+app.delete("/users/:id",(req,res)=>{
   const id=Number(req.params.body);
   const index=users.findIndex(u=>u.id===id);
     if(index==-1){
