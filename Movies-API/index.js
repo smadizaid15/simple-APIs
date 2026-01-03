@@ -4,7 +4,7 @@ const port=5500;
 app.use(express.json());
 let movies=[];
 
-
+ 
 app.listen(
   port,
   ()=>{console.log(`live on http://localhost:${port}`);
